@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RehabFlex - AI-Powered Physical Therapy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h2>RehabFlex</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#exercise-library" class="nav-link">Exercise Library</a>
+                <a href="#patient-portal" class="nav-link">Patient Portal</a>
+                <a href="#provider-portal" class="nav-link">Provider Portal</a>
+                <button class="btn btn--primary" id="loginBtn">Login</button>
+                <button class="accessibility-toggle" id="accessibilityToggle" aria-label="Toggle accessibility features">
+                    <span class="sr-only">Accessibility</span>
+                    🔍
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Accessibility Panel -->
+    <div class="accessibility-panel hidden" id="accessibilityPanel">
+        <h3>Accessibility Options</h3>
+        <div class="accessibility-controls">
+            <label class="form-label">
+                <input type="range" min="12" max="24" value="16" id="fontSizeSlider"> Font Size
+            </label>
+            <label class="form-label">
+                <input type="checkbox" id="highContrastToggle"> High Contrast
+            </label>
+            <label class="form-label">
+                <input type="checkbox" id="focusIndicatorToggle"> Enhanced Focus
+            </label>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>AI-Powered Physical Therapy</h1>
+                    <p class="hero-subtitle">Revolutionizing rehabilitation with intelligent motion tracking and personalized exercise programs</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn--primary btn--lg" id="startTrialBtn">Start Free Trial</button>
+                        <button class="btn btn--outline btn--lg" id="learnMoreBtn">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-placeholder">
+                        <div class="placeholder-content">
+                            <h3>Motion Tracking Demo</h3>
+                            <p>Experience our AI-powered rehabilitation system</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-number">15,000+</div>
+                    <div class="stat-label">Patients Helped</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">92<span class="percent-symbol">%</span></div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">450K+</div>
+                    <div class="stat-label">Exercises Completed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">6 weeks</div>
+                    <div class="stat-label">Avg Recovery Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Advanced Rehabilitation Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>AI Motion Tracking</h3>
+                    <p>Real-time pose detection ensures proper exercise form with instant feedback</p>
+                    <div class="tooltip-container">
+                        <button class="tooltip-trigger" data-tooltip="Uses advanced computer vision to analyze movement patterns">ℹ️</button>
+                        <div class="tooltip">Uses advanced computer vision to analyze movement patterns</div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗣️</div>
+                    <h3>Voice Guidance</h3>
+                    <p>AI-powered voice assistant provides immediate corrections and encouragement</p>
+                    <div class="tooltip-container">
+                        <button class="tooltip-trigger" data-tooltip="Natural language processing for personalized coaching">ℹ️</button>
+                        <div class="tooltip">Natural language processing for personalized coaching</div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Progress Analytics</h3>
+                    <p>Comprehensive tracking and visualization of rehabilitation progress</p>
+                    <div class="tooltip-container">
+                        <button class="tooltip-trigger" data-tooltip="Advanced metrics and reporting for optimal recovery">ℹ️</button>
+                        <div class="tooltip">Advanced metrics and reporting for optimal recovery</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exercise Library -->
+    <section id="exercise-library" class="exercise-library">
+        <div class="container">
+            <h2>Exercise Library</h2>
+            <div class="exercise-categories">
+                <div class="exercise-category">
+                    <div class="exercise-image-container">
+                        <div class="exercise-image knee-image"></div>
+                        <div class="exercise-overlay">
+                            <h3>Knee Rehabilitation</h3>
+                            <p>Strengthen and restore knee function</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-category">
+                    <div class="exercise-image-container">
+                        <div class="exercise-image shoulder-image"></div>
+                        <div class="exercise-overlay">
+                            <h3>Shoulder Recovery</h3>
+                            <p>Improve shoulder mobility and strength</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="exercise-category">
+                    <div class="exercise-image-container">
+                        <div class="exercise-image hip-image"></div>
+                        <div class="exercise-overlay">
+                            <h3>Hip Strengthening</h3>
+                            <p>Enhance hip stability and movement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Portal -->
+    <section id="patient-portal" class="patient-portal">
+        <div class="container">
+            <h2>Patient Portal</h2>
+            <div class="portal-tabs">
+                <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+                <button class="tab-btn" data-tab="exercises">Exercises</button>
+                <button class="tab-btn" data-tab="progress">Progress</button>
+                <button class="tab-btn" data-tab="motion-sensor">Motion Sensor</button>
+            </div>
+            
+            <div class="tab-content active" id="dashboard">
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <div class="card__header">
+                            <h3>Today's Plan</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="daily-exercises" id="dailyExercises"></div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__header">
+                            <h3>Upcoming Sessions</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="upcoming-sessions" id="upcomingSessions"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="exercises">
+                <div class="enhanced-exercise-interface">
+                    <div class="exercise-controls">
+                        <h3>Interactive Exercise Session</h3>
+                        <div class="exercise-selection">
+                            <select class="form-control" id="exerciseSelect">
+                                <option value="">Select an exercise</option>
+                                <option value="knee-extension">Knee Extension</option>
+                                <option value="shoulder-rolls">Shoulder Rolls</option>
+                                <option value="hip-bridges">Hip Bridges</option>
+                            </select>
+                        </div>
+                        <div class="exercise-actions">
+                            <button class="btn btn--primary" id="startExerciseBtn">Start Exercise</button>
+                            <button class="btn btn--secondary" id="pauseExerciseBtn">Pause</button>
+                            <button class="btn btn--outline" id="stopExerciseBtn">Stop</button>
+                        </div>
+                    </div>
+                    <div class="exercise-feedback">
+                        <div class="form-indicator">
+                            <div class="indicator-circle" id="formIndicator"></div>
+                            <span id="formStatus">Ready to begin</span>
+                        </div>
+                        <div class="rep-counter">
+                            <span>Reps: </span><span id="repCount">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="progress">
+                <div class="progress-charts">
+                    <div class="card">
+                        <div class="card__header">
+                            <h3>Weekly Progress</h3>
+                        </div>
+                        <div class="card__body">
+                            <div class="chart-container" style="position: relative; height: 300px;">
+                                <canvas id="progressChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-metrics">
+                        <div class="metric">
+                            <div class="metric-value">124</div>
+                            <div class="metric-label">Exercises Completed</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">91%</div>
+                            <div class="metric-label">Average Accuracy</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">23</div>
+                            <div class="metric-label">Day Streak</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="motion-sensor">
+                <div class="motion-sensor-interface">
+                    <div class="camera-section">
+                        <video id="cameraFeed" autoplay muted></video>
+                        <canvas id="poseCanvas"></canvas>
+                    </div>
+                    <div class="sensor-controls">
+                        <button class="btn btn--primary" id="enableCameraBtn">Enable Camera</button>
+                        <button class="btn btn--secondary" id="startPoseDetectionBtn">Start Pose Detection</button>
+                        <div class="voice-feedback">
+                            <h4>AI Voice Assistant</h4>
+                            <div class="voice-status" id="voiceStatus">Voice assistant ready</div>
+                            <button class="btn btn--outline" id="toggleVoiceBtn">Toggle Voice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Provider Portal -->
+    <section id="provider-portal" class="provider-portal">
+        <div class="container">
+            <h2>Provider Portal</h2>
+            <div class="portal-tabs">
+                <button class="tab-btn active" data-tab="patients">Patients</button>
+                <button class="tab-btn" data-tab="analytics">Analytics</button>
+                <button class="tab-btn" data-tab="reports">Reports</button>
+            </div>
+            
+            <div class="tab-content active" id="patients">
+                <div class="patients-table">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Patient</th>
+                                <th>Age</th>
+                                <th>Condition</th>
+                                <th>Progress</th>
+                                <th>Last Session</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="patientsTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="analytics">
+                <div class="analytics-dashboard">
+                    <h3>Practice Analytics</h3>
+                    <div class="analytics-grid">
+                        <div class="card">
+                            <div class="card__body">
+                                <h4>Patient Satisfaction</h4>
+                                <div class="progress-circle" data-progress="92">
+                                    <span class="progress-text">92%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__body">
+                                <h4>Recovery Rate</h4>
+                                <div class="progress-circle" data-progress="85">
+                                    <span class="progress-text">85%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="reports">
+                <div class="reports-section">
+                    <h3>Generate Reports</h3>
+                    <div class="report-options">
+                        <button class="btn btn--outline">Patient Progress Report</button>
+                        <button class="btn btn--outline">Exercise Compliance Report</button>
+                        <button class="btn btn--outline">Outcome Analysis</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal - Hidden by default -->
+    <div class="modal hidden" id="loginModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Login</h3>
+                <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="coming-soon-message">
+                    <h4>Would be available in full release</h4>
+                    <p>We're working hard to bring you the complete RehabFlex experience. Stay tuned!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
