@@ -1,4 +1,4 @@
-Datasprint Hackathon Round 1 Project (Prototype)
+Datasprint Hackathon (Vibe Coding) Round 1 Project (Prototype)
 
 Key Sections Covered:
 📋 Project Overview - Professional description with badges and demo image
