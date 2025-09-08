@@ -1,4 +1,4 @@
-Datasprint Hackathon (Vibe Coding) Round 2 Project (Prototype)
+Datasprint Hackathon (Vibe Coded) Round 2 Project (Prototype)
 
 https://rehabconnect.netlify.app/
 
